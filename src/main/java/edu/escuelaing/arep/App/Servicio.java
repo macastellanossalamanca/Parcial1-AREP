@@ -73,14 +73,16 @@ public class Servicio {
 	}
 	
 	public static String computo(String fun, double num) {
-		String resultado = "{";
+		String resultado = "{ valor: ";
 		if (fun.equals("cos")){
-			resultado = Double.toString(Math.cos(num));
+			resultado += Double.toString(Math.cos(num));
 		} else if (fun.equals("sin")){
-			resultado = Double.toString(Math.sin(num));
+			resultado += Double.toString(Math.sin(num));
 		} else if (fun.equals("tan")){
-			resultado = Double.toString(Math.tan(num));
+			resultado += Double.toString(Math.tan(num));
 		}
+		
+		resultado += "}";
 		
 		return resultado;
 	}
