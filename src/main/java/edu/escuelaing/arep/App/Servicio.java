@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
+import org.json.JSONObject;
+
 import spark.Request;
 import spark.Response;
 
@@ -71,7 +73,7 @@ public class Servicio {
 	}
 	
 	public static String computo(String fun, double num) {
-		String resultado = "";
+		String resultado = "{";
 		if (fun.equals("cos")){
 			resultado = Double.toString(Math.cos(num));
 		} else if (fun.equals("sin")){
@@ -79,6 +81,7 @@ public class Servicio {
 		} else if (fun.equals("tan")){
 			resultado = Double.toString(Math.tan(num));
 		}
+		
 		return resultado;
 	}
 	
